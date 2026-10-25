@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="One Kind Fashion — আপনার স্টাইল, আপনার পরিচয়। টি-শার্ট ও কাস্টম প্রিন্ট।">
+  <title>One Kind Fashion | Be One. Be Kind. Be You.</title>
+  <style>
+    :root{--ink:#151515;--paper:#f7f5f0;--accent:#b8915b;--muted:#6b6b6b;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .topbar{background:var(--ink);color:white;text-align:center;padding:8px 12px;font-size:13px;letter-spacing:.2px}
+    header{position:sticky;top:0;z-index:10;background:rgba(247,245,240,.96);backdrop-filter:blur(10px);border-bottom:1px solid #e5e0d7}
+    .nav{max-width:1100px;margin:auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:900;font-size:20px;letter-spacing:1.2px;line-height:1.15}
+    .brand small{display:block;font-size:10px;letter-spacing:2.5px;font-weight:600;margin-top:5px}
+    .navlinks{display:flex;gap:18px;font-size:14px}
+    .hero{max-width:1100px;margin:auto;padding:54px 18px 46px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#87673d}
+    h1{font-size:clamp(38px,6vw,68px);line-height:1.08;letter-spacing:-1.5px;margin:12px 0 18px}
+    .hero p{max-width:490px;color:#555;font-size:17px}
+    .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--ink);padding:12px 18px;font-weight:750;font-size:14px;min-height:46px}
+    .btn.dark{background:var(--ink);color:white}
+    .hero-art{min-height:330px;background:#ded5c7;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hero-art:before{content:"";position:absolute;width:240px;height:300px;border-radius:48% 48% 8px 8px;background:#202020;transform:rotate(-7deg);box-shadow:24px 18px 0 rgba(255,255,255,.18)}
+    .hero-art:after{content:"ONE KIND\\A FASHION";white-space:pre;position:relative;color:#f5f1e8;font-weight:900;font-size:23px;letter-spacing:3px;text-align:center;line-height:1.5}
+    .art-note{position:absolute;bottom:16px;right:16px;font-size:11px;letter-spacing:1px;font-weight:800}
+    section{padding:44px 18px}
+    .section-inner{max-width:1100px;margin:auto}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}
+    h2{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:6px 0}
+    .sub{color:var(--muted);margin:0}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .product{background:white;border:1px solid #e9e4dc}
+    .product-img{height:245px;display:flex;align-items:center;justify-content:center;background:#e7e3dc;overflow:hidden;position:relative}
+    .shirt{width:135px;height:155px;background:#222;clip-path:polygon(27% 0,40% 0,45% 8%,55% 8%,60% 0,73% 0,100% 23%,82% 42%,72% 32%,72% 100%,28% 100%,28% 32%,18% 42%,0 23%);filter:drop-shadow(8px 10px 7px #0002);position:relative}
+    .shirt:after{content:"ONE KIND";position:absolute;top:58px;left:0;right:0;text-align:center;color:#f8f5ef;font-size:10px;font-weight:800;letter-spacing:1px}
+    .shirt.white{background:#f8f7f2;border:1px solid #d6d2cb}.shirt.white:after{color:#222}
+    .shirt.maroon{background:#642b3b}.shirt.green{background:#244c3a}.shirt.blue{background:#25466b}
+    .product-info{padding:15px}
+    .product-info h3{margin:0 0 5px;font-size:17px}
+    .product-info p{margin:0;color:#666;font-size:13px}
+    .price{font-weight:850;font-size:19px;margin:12px 0}
+    .product-info .btn{width:100%;cursor:pointer;background:#151515;color:white}
+    .notice{background:#e9e1d3;padding:20px;margin-top:22px;font-size:14px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .feature{padding:20px;border:1px solid #e0d9ce;background:#fff}
+    .feature strong{display:block;margin-bottom:6px}
+    .custom{background:#171717;color:white}
+    .custom .sub{color:#d0d0d0}
+    .custom .btn{background:white;color:#111;border-color:white;margin-top:15px}
+    footer{background:#111;color:#eee;padding:30px 18px}
+    .footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer p{margin:4px 0;color:#c9c9c9;font-size:13px}
+    .small{font-size:12px;color:#777;margin-top:16px}
+    @media(max-width:720px){.navlinks{gap:10px;font-size:12px}.brand{font-size:17px}.hero{grid-template-columns:1fr;padding-top:36px}.hero-art{min-height:270px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-img{height:190px}.shirt{transform:scale(.83)}.product-info{padding:11px}.product-info h3{font-size:15px}.price{font-size:17px}.features{grid-template-columns:1fr}.section-head{display:block}}
+    @media(max-width:390px){.navlinks{gap:7px}.navlinks a{font-size:11px}.products{grid-template-columns:1fr}.product-img{height:230px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">সারা বাংলাদেশে অর্ডার নেওয়া হয় · হোম ডেলিভারি</div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home">ONE KIND FASHION<small>BE ONE. BE KIND. BE YOU.</small></a>
+      <div class="navlinks"><a href="#products">প্রোডাক্ট</a><a href="#custom">কাস্টম প্রিন্ট</a><a href="#contact">যোগাযোগ</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">Everyday style, your way</div>
+        <h1>স্টাইল হোক<br>নিজের মতো।</h1>
+        <p>One Kind Fashion-এর সঙ্গে বেছে নিন আপনার পছন্দের টি-শার্ট। আপনার আইডিয়া অনুযায়ী কাস্টম প্রিন্টের সুযোগও রয়েছে।</p>
+        <div class="buttons"><a class="btn dark" href="#products">প্রোডাক্ট দেখুন</a><a class="btn" href="#custom">কাস্টম ডিজাইন</a></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="One Kind Fashion টি-শার্টের ইলাস্ট্রেশন"><span class="art-note">YOUR STYLE. YOUR STORY.</span></div>
+    </section>
+
+    <section id="products">
+      <div class="section-inner">
+        <div class="section-head"><div><div class="eyebrow">Featured collection</div><h2>আমাদের টি-শার্ট</h2><p class="sub">এগুলো নমুনা প্রোডাক্ট—অর্ডারের আগে বর্তমান স্টক নিশ্চিত করুন।</p></div></div>
+        <div class="products">
+          <article class="product"><div class="product-img"><div class="shirt"></div></div><div class="product-info"><h3>Classic Black Tee</h3><p>সিম্পল ও versatile লুক</p><div class="price">৳৪৬৯</div><button class="btn" onclick="order('Classic Black Tee')">অর্ডার করুন</button></div></article>
+          <article class="product"><div class="product-img"><div class="shirt white"></div></div><div class="product-info"><h3>Classic Off-White Tee</h3><p>পরিষ্কার, মিনিমাল স্টাইল</p><div class="price">৳৪৬৯</div><button class="btn" onclick="order('Classic Off-White Tee')">অর্ডার করুন</button></div></article>
+          <article class="product"><div class="product-img"><div class="shirt maroon"></div></div><div class="product-info"><h3>Maroon Tee</h3><p>ক্লাসিক কালার অপশন</p><div class="price">৳৪৬৯</div><button class="btn" onclick="order('Maroon Tee')">অর্ডার করুন</button></div></article>
+          <article class="product"><div class="product-img"><div class="shirt green"></div></div><div class="product-info"><h3>Deep Green Tee</h3><p>ক্যাজুয়াল ডেইলি ওয়্যার</p><div class="price">৳৪৬৯</div><button class="btn" onclick="order('Deep Green Tee')">অর্ডার করুন</button></div></article>
+          <article class="product"><div class="product-img"><div class="shirt blue"></div></div><div class="product-info"><h3>Blue Tee</h3><p>সহজে মানিয়ে যায় এমন স্টাইল</p><div class="price">৳৪৬৯</div><button class="btn" onclick="order('Blue Tee')">অর্ডার করুন</button></div></article>
+          <article class="product"><div class="product-img"><div class="shirt" style="background:#777"></div></div><div class="product-info"><h3>Grey Tee</h3><p>সিম্পল ও আরামদায়ক লুক</p><div class="price">৳৪৬৯</div><button class="btn" onclick="order('Grey Tee')">অর্ডার করুন</button></div></article>
+        </div>
+        <div class="notice"><strong>অর্ডার ও পেমেন্ট:</strong> ক্যাশ অন হোম ডেলিভারি। অর্ডার কনফার্ম করতে ১০০৳ অগ্রিম দিতে হবে। ডেলিভারি চার্জ আলাদা এবং ক্রেতাকে দিতে হবে। সাইজ, স্টক ও ডেলিভারি চার্জ অর্ডারের আগে নিশ্চিত করুন।</div>
+      </div>
+    </section>
+
+    <section id="custom">
+      <div class="section-inner custom" style="padding:28px">
+        <div class="eyebrow">Make it yours</div><h2>আপনার ডিজাইন, আপনার টি-শার্ট</h2>
+        <p class="sub">আপনার পছন্দের ডিজাইন বা আইডিয়া অনুযায়ী কাস্টম প্রিন্টের জন্য আমাদের সঙ্গে যোগাযোগ করুন। প্রিন্ট ও অর্ডারের বিস্তারিত আগে আলোচনা করে নিন।</p>
+        <a class="btn" href="#contact">কাস্টম অর্ডার সম্পর্কে জানুন</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="section-head"><div><div class="eyebrow">Shop with clarity</div><h2>অর্ডারের আগে জেনে নিন</h2></div></div>
+        <div class="features">
+          <div class="feature"><strong>১. সাইজ নিশ্চিত করুন</strong><p class="sub">অর্ডার দেওয়ার আগে আপনার পছন্দের সাইজ ও মাপ মেসেজে নিশ্চিত করুন।</p></div>
+          <div class="feature"><strong>২. স্টক যাচাই করুন</strong><p class="sub">রঙ, সাইজ ও প্রোডাক্টের বর্তমান স্টক সম্পর্কে জেনে নিন।</p></div>
+          <div class="feature"><strong>৩. অর্ডার কনফার্ম করুন</strong><p class="sub">১০০৳ অগ্রিমসহ পেমেন্ট ও ডেলিভারির শর্ত নিশ্চিত করে অর্ডার দিন।</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-inner">
+      <div><div class="brand">ONE KIND FASHION<small>BE ONE. BE KIND. BE YOU.</small></div><p>আপনার স্টাইল, আপনার পরিচয়।</p></div>
+      <div><strong>যোগাযোগ</strong><p>ফোন / WhatsApp: 01607024518</p><p>Email: oneekindfashion@gmail.com</p><p>Facebook: One Kind Fashion</p></div>
+    </div>
+    <div class="footer-inner"><p class="small">© <span id="year"></span> One Kind Fashion. All rights reserved.</p><p class="small">নোট: এই সাইটের প্রোডাক্ট ও দাম প্রকাশের আগে নিজের বর্তমান স্টক অনুযায়ী আপডেট করুন।</p></div>
+  </footer>
+
+  <script>
+    const WHATSAPP_NUMBER = "8801607024518"; // WhatsApp নম্বর পরিবর্তন করতে এখানে 880 দিয়ে দেশের কোডসহ নম্বর দিন
+    function order(product){
+      const message = `আসসালামু আলাইকুম, One Kind Fashion থেকে ${product} অর্ডার করতে চাই। দয়া করে সাইজ, রঙ, স্টক ও ডেলিভারি চার্জ জানাবেন।`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank");
+    }
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
